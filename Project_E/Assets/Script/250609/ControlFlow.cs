@@ -1,0 +1,197 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Threading;
+using UnityEngine;
+
+public class ControlFlow : MonoBehaviour
+{
+    // Start is called before the first frame update
+    int count;
+
+    private void Awake()
+    {
+        count = 0;
+    }
+
+    // [업 다운]
+    // 랜덤한 수 1~100 사이에 값을 만들고
+    // 정답을 맞출때 까지 반복
+
+
+
+
+
+    public void GachaTen()
+    {
+        int number = 0;
+        while (number < 10)
+        {
+            int randomValue = Random.Range(1, 101); // 1이상 101미만의 랜덤한 값을 받아 오겠다. (1 ~ 100) 
+
+            Debug.Log($"랜덤한 값은 : {randomValue} 입니다");
+            // count 81
+            if (8 <= count)
+            {
+                Debug.Log("확정으로 '각청'을 뽑았다!");
+                count = 0;
+            }
+            else if (randomValue <= 10) // 1 ~ 10 -> 10%
+            {
+                Debug.Log("'각청'을 뽑았다!");
+            }
+            else if (randomValue <= 30) // 11 ~ 30
+            {
+                Debug.Log("'모나'을 뽑았다!");
+            }
+            else if (randomValue <= 50) // 11 ~ 30
+            {
+                Debug.Log("'호두'을 뽑았다!");
+            }
+            else if (randomValue <= 70) // 11 ~ 30
+            {
+                Debug.Log("'감우'을 뽑았다!");
+            }
+            else
+            {
+                Debug.Log("'치치'를 뽑아버렸다!");
+            }
+
+            count++;
+            number++;
+        }
+        
+        
+        for (int i = 0; i < 10; i++)
+        {
+            
+        }
+
+    
+    }
+
+    public void Gacha()
+    {
+        // 확률이 10%면 로그에 '각청'을 뽑았다!
+        // 확률이 20%면 로그에 '모나'를 뽑았다!
+        // 나머지 70% 확률로 '치치'를 뽑아버렸다!
+
+        int randomValue = Random.Range(1, 101); // 1이상 101미만의 랜덤한 값을 받아 오겠다. (1 ~ 100) 
+
+        Debug.Log($"랜덤한 값은 : {randomValue} 입니다");
+        // count 81
+        if (8 <= count)
+        {
+            Debug.Log("확정으로 '각청'을 뽑았다!");
+            count = 0;
+        }
+        else if (randomValue <= 10) // 1 ~ 10 -> 10%
+        {
+            Debug.Log("'각청'을 뽑았다!");
+        }
+        else if (randomValue <= 30) // 11 ~ 30
+        {
+            Debug.Log("'모나'을 뽑았다!");
+        }
+        else if (randomValue <= 50) // 11 ~ 30
+        {
+            Debug.Log("'호두'을 뽑았다!");
+        }
+        else if (randomValue <= 70) // 11 ~ 30
+        {
+            Debug.Log("'감우'을 뽑았다!");
+        }
+        else
+        {
+            Debug.Log("'치치'를 뽑아버렸다!");
+        }
+
+        count++;
+    }
+    // if -> switch 문으로 변경해 보자
+
+    public int selectNumber = 0;
+    public void GachaSwitch()
+    {
+        // 
+        int randomValue = Random.Range(1, 101); // 1이상 101미만의 랜덤한 값을 받아 오겠다. (1 ~ 100) 
+
+        int selectNumber = 0;
+
+        switch (selectNumber) //0
+        {
+            case 0:
+                // 은색 머리 캐릭터가 나온다
+                {
+                    if (randomValue <= 10) // 1 ~ 10 -> 10%
+                    {
+                        Debug.Log("'은색 머리'을 뽑았다!");
+                    }
+                    else if (randomValue <= 30) // 11 ~ 30
+                    {
+                        Debug.Log("'모나'을 뽑았다!");
+                    }
+                    else
+                    {
+                        Debug.Log("'치치'를 뽑아버렸다!");
+                    }
+                }
+                break;
+
+            case 1:
+                // 파란 머리 캐릭터가 나온다
+                {
+                    if (randomValue <= 10) // 1 ~ 10 -> 10%
+                    {
+                        Debug.Log("'파란 머리'을 뽑았다!");
+                    }
+                    else if (randomValue <= 30) // 11 ~ 30
+                    {
+                        Debug.Log("'모나'을 뽑았다!");
+                    }
+                    else
+                    {
+                        Debug.Log("'치치'를 뽑아버렸다!");
+                    }
+                }
+                break;
+
+            case 2:
+                // 분홍 머리 캐릭터가 나온다
+                {
+                    if (randomValue <= 10) // 1 ~ 10 -> 10%
+                    {
+                        Debug.Log("'분홍 머리'을 뽑았다!");
+                    }
+                    else if (randomValue <= 30) // 11 ~ 30
+                    {
+                        Debug.Log("'모나'을 뽑았다!");
+                    }
+                    else
+                    {
+                        Debug.Log("'치치'를 뽑아버렸다!");
+                    }
+                }
+                break;
+
+            default:
+                // 파란 머리 꼬마 캐릭터가 나온다.
+                {
+                    if (randomValue <= 10) // 1 ~ 10 -> 10%
+                    {
+                        Debug.Log("'파란 머리 꼬마'을 뽑았다!");
+                    }
+                    else if (randomValue <= 30) // 11 ~ 30
+                    {
+                        Debug.Log("'모나'을 뽑았다!");
+                    }
+                    else
+                    {
+                        Debug.Log("'치치'를 뽑아버렸다!");
+                    }
+                }
+                break;
+        }
+    }
+
+    
+}
