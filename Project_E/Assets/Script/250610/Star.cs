@@ -44,7 +44,7 @@ public class Star : MonoBehaviour
         star = string.Empty;
         for (int i = 1; i < 6; i++) // 몇번째 줄인지 
         {
-            // 1번째 줄이면 별이 1개 + 빈칸 4개 + 줄바꿈
+            
             for (int a = 0; a < 5 - i; a++)
             {
                 star += "　";
@@ -69,7 +69,7 @@ public class Star : MonoBehaviour
         // 페이즈 3
         for (int i = 1; i < 10; i++) // 몇번째 줄인지 
         {
-            // 1번째 줄이면 별이 1개 + 빈칸 4개 + 줄바꿈
+            
             if (i < 6)
             {
                 for (int a = 0; a < i; a++)
@@ -108,7 +108,7 @@ public class Star : MonoBehaviour
         // 페이즈 4
         for (int i = 1; i < 10; i++) // 몇번째 줄인지 
         {
-            // 1번째 줄이면 별이 1개 + 빈칸 4개 + 줄바꿈
+            
             if (i < 6)
             {
                 for (int a = 0; a < 5 - i; a++)
@@ -146,7 +146,7 @@ public class Star : MonoBehaviour
         // 페이즈 5
         for (int i = 1; i < 10; i++) // 몇번째 줄인지 
         {
-            // 1번째 줄이면 별이 1개 + 빈칸 4개 + 줄바꿈
+            
             if (i < 6)
             {
                 for (int a = 0; a < 5 - i; a++)
