@@ -73,7 +73,7 @@ public class Star : MonoBehaviour
             
             if (i < 6)
             {
-                for (int a = 0; a < i; a++)
+                for (int a = 0; a < i; a++) // 절댓값으로 별의 개수를 대칭으로 만들 수 있음.
                 {
                     star += "★";
                 }
