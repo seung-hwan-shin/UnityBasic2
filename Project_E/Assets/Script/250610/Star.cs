@@ -14,10 +14,11 @@ public class Star : MonoBehaviour
         Phase3();
         Phase4();
         Phase5();
+        Phase6();
     }
 
     // star += "★"; // 별
-    // star += "　"; // 빈칸
+    //star += "　"; // 빈칸
     // star += "\n"; // 줄바꿈
 
     public void Phase1()
@@ -85,7 +86,7 @@ public class Star : MonoBehaviour
 
             else
             {
-                for (int a = 0; a < 5 - (i - 5); a++)
+                for (int a = 0; a < 5 - (i - 5); a++) // 5번째 줄부터 줄어드는 수
                 {
                     star += "★";
                 }
@@ -128,7 +129,7 @@ public class Star : MonoBehaviour
                 {
                     star += "　";
                 }
-                for (int a = 0; a < 5 - (i - 5); a++)
+                for (int a = 0; a < 5 - (i - 5); a++) // 5번째 줄부터 줄어드는 수
                 {
                     star +=  "★";
                 }
@@ -174,9 +175,54 @@ public class Star : MonoBehaviour
                 {
                     star += "★";
                 }
-                for (int a = 0; a < 5 - i; a++)
+                for (int a = 0; a < i - 5; a++)
                 {
                     star += "　";
+                }
+                star += "\n";
+            }
+        }
+
+        Debug.Log(star);
+    }
+    public void Phase6()
+    {
+        star = string.Empty;
+
+        // 페이즈 6
+        for (int i = 1; i < 10; i++) // 몇번째 줄인지 
+        {
+
+            if (i < 6)
+            {
+                for (int a = 0; a < 5 - i; a++)
+                {
+                    star += "★";
+                }
+                for (int a = 0; a < 9 - (5 - i) * 2; a++)
+                {
+                    star += "　";
+                }
+                for (int a = 0; a < 5 - i; a++)
+                {
+                    star += "★";
+                }
+                star += "\n";
+            }
+
+            else
+            {
+                for (int a = 0; a < i - 5; a++)
+                {
+                    star +=  "★";
+                }
+                for (int a = 0; a < 9 - (i - 5) * 2; a++)
+                {
+                    star += "　";
+                }
+                for (int a = 0; a < i - 5; a++)
+                {
+                    star += "★";
                 }
                 star += "\n";
             }
