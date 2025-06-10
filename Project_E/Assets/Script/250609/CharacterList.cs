@@ -12,6 +12,8 @@ public class CharacterList : MonoBehaviour
     List<string> GaChaCharacterSSR = new List<string>();
     List<string> GaChaCharacterSR = new List<string>();
     int count = 0;
+    public int selectNumber = 0;
+
     void Start()
     {
         // SSR 8종류
@@ -24,7 +26,7 @@ public class CharacterList : MonoBehaviour
         GaChaCharacterSSR.Add("요이미야");
         GaChaCharacterSSR.Add("푸리나");
 
-
+        // SR 9종류
         GaChaCharacterSR.Add("엠버");
         GaChaCharacterSR.Add("향릉");
         GaChaCharacterSR.Add("신염");
@@ -37,13 +39,13 @@ public class CharacterList : MonoBehaviour
 
     }
 
-    public int selectNumber = 0;
+    
        
     public void RandomGaCha()
     {
 
         int number = 0;
-        int selectNumber = 0;
+        // int selectNumber = 0;
         while (number < 10)
         {
             int randomValue = Random.Range(1, 101); // 1이상 101미만의 랜덤한 값을 받아 오겠다. (1 ~ 100) 
